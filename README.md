@@ -16,6 +16,7 @@ This script combines geometry repair, controlled snapping, and rule-based vertex
   - proximity to an optional outline
 - Limits area distortion during internal cleanup
 - Optionally snaps outer boundaries to a reference layer
+- The workflow reduces topology errors while preserving geometric structure.
 
 ---
 
@@ -46,6 +47,20 @@ The goal is not perfect reconstruction, but fast and controlled error reduction.
 
 All parameters are defined at the top of the file.
 
+If you don’t have a dataset, a seed script (topology_seed_generator.py) is included to generate synthetic polygon data with controlled topology errors for testing.
+
+---
+## Synthetic test data
+
+This repository includes a seed generator to create polygon datasets with controlled topology errors.
+
+It can be used to:
+- test topology correction workflows
+- benchmark cleaning performance
+- generate reproducible demo datasets
+
+The generator produces irregular polygons with subtle errors that require proper topology validation tools to detect.
+
 ---
 
 ## Notes
@@ -64,6 +79,27 @@ Topology error reduction on a synthetic dataset:
 - Initial errors: ~1800  
 - After 3 iterations: ~39  
 
+### Dataset overview
+
+Before:
+
+![Before Overview](examples/before_overview.png)
+
+After:
+
+![After Overview](examples/after_overview.png)
+
+---
+
+### Local detail (topology errors)
+
+Before:
+
+![Before Detail](examples/before_detail.png)
+
+After:
+
+![After Detail](examples/after_detail.png)
 ---
 
 ## Limitations
@@ -76,3 +112,6 @@ It does not rebuild topology globally on heavily degraded data.
 ## License
 
 MIT
+
+
+
