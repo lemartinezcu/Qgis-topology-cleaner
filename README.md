@@ -100,6 +100,7 @@ Before:
 After:
 
 ![After Detail](examples/after_detail.png)
+
 ---
 
 ## Limitations
