@@ -58,10 +58,9 @@ This workflow performs **controlled topology cleaning**:
 - GRASS `v.clean` → aggressive cleanup  
 - This workflow → controlled, area-preserving cleanup  
 
----
-
 Designed for datasets used in analysis and modeling, where geometric distortion must be minimized.
 
+---
 ### Notes
 
 * Residual errors are typically complex edge cases or require global topology reconstruction.
