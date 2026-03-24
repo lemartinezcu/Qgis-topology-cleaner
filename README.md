@@ -42,6 +42,26 @@ Tested on synthetic Voronoi datasets with injected topology errors:
 
 > Results may vary depending on data quality and tolerance parameters.
 
+## Design approach
+
+This workflow performs **controlled topology cleaning**:
+
+- prioritizes geometric stability  
+- limits area distortion per feature  
+- applies conservative local rules instead of global simplification  
+
+---
+
+## Compared to standard tools
+
+- QGIS topology checker → detects errors  
+- GRASS `v.clean` → aggressive cleanup  
+- This workflow → controlled, area-preserving cleanup  
+
+---
+
+Designed for datasets used in analysis and modeling, where geometric distortion must be minimized.
+
 ### Notes
 
 * Residual errors are typically complex edge cases or require global topology reconstruction.
